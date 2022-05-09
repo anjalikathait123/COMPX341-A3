@@ -14,7 +14,7 @@ interface BestSellersState {
 
 export default class BestSellers extends React.Component<BestSellersProps, BestSellersState> {
   constructor(props: BestSellersProps) {
-    super(prop);
+    super(props);
 
     this.state = {
       isLoading: true,
