@@ -1,14 +1,39 @@
-#Committing any changes to Git
-git add .
-git commit -m "COMPX341-22A-A3 Committing from CI/CD Pipeline"
-git push origin master
-echo "Commit successful"
+#! /bin/bash
 
 #Going into the 'assets' directory
 cd assets
 
-#Running application using NPM
-npm install
-npm run build
-npm run start
+#npm install -g ts-node typescript '@type/node'
+#ts-node typescript-file.ts
 
+
+#if [tsc *.ts = true]; then
+#    echo "Build successful"
+#    npm run start
+#else
+#    echo "Build failed"
+#    exit
+#fi
+
+
+
+
+npm install
+npm run build 
+if [$? == 0]; then
+    echo "success"
+    npm run start
+else 
+    echo "failed"
+fi
+
+#VALID="$(npm run build | grep -o 'failing')"
+#npm audit
+
+#if [ $VALID != "failing" ]; then
+#    echo "Build successful"
+#    npm run start
+#else 
+#    echo "Build failed"
+#    exit
+#fi
