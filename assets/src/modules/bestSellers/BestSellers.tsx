@@ -14,12 +14,12 @@ interface BestSellersState {
 
 export default class BestSellers extends React.Component<BestSellersProps, BestSellersState> {
   constructor(props: BestSellersProps) {
-    super(propss);
+    super(props);
 
     this.state = {
       isLoading: true,
       books: []
-    };
+    }
   }
 
   async componentDidMount() {
