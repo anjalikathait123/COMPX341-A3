@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 #Going into the 'assets' directory
 cd assets
